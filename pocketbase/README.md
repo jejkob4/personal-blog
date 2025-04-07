@@ -4,11 +4,11 @@ checkout how to run pocketbase here: [Pocketbase documentation](https://pocketba
 
 ## Create the table "posts"
 
-id: autonum
-content: richText
-createdAt..
-UpdatedAt..
-coverImg: image
-author: email
+id: autonum, 
+content: richText, 
+createdAt.., 
+UpdatedAt.., 
+coverImg: image, 
+author: email, 
 
 ![reference](https://i.imgur.com/qMaYi4X.png)
