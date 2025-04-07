@@ -24,7 +24,7 @@
         <h1 class="text-2xl text-center">Lorem ipsum dolor sit amet.</h1>
     </div>
 <div class="container mx-auto w-[85%]">
-    <h1 class="mt-4 text-4xl">Lorem Ipsum</h1>
+    <h1 class="mt-8 text-4xl">Lorem Ipsum</h1>
     <p class="my-8">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in quam ut libero 
         convallis commodo. Nullam pellentesque ac dolor sed suscipit.
