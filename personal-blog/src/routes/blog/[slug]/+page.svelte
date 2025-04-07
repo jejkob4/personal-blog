@@ -26,7 +26,7 @@
         </div>
         <div class="flex justify-between items-center mt-8">
             <a class="text-blue-500 hover:underline font-semibold" href="/blog">Go back..</a>
-            <div class="">
+            <div class="text-right">
                 Author of this article:
                 <br>
                 <a class="text-blue-500 hover:underline font-semibold" href="mailto:{response.author}">{response.author}</a> 

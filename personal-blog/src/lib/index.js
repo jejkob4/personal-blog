@@ -1,7 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 import PocketBase from 'pocketbase';
 
-export const API_URL = 'http://127.0.0.1:8090';
+export const API_URL = 'https://pocketbase-production-e150.up.railway.app';
 
 const pb = new PocketBase(API_URL);
 
