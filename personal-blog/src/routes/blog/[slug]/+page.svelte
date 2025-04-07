@@ -10,7 +10,6 @@
     onMount(async ()=> {
         if ($page.params.slug){
             response = await getBlogDataById($page.params.slug);
-            console.log(response);
         }
     });
     
