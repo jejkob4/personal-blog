@@ -1,6 +1,9 @@
 <script>
 import FooterComponent from '$lib/components/footer.svelte'
 import {getBlogData, API_URL} from '$lib/index.js';
+import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+injectSpeedInsights();
 
 import { onMount } from 'svelte';
 
