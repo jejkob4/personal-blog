@@ -2,7 +2,7 @@
     import FooterComponent from '$lib/components/footer.svelte';
 </script>
 <svelte:head>
-    <title>Blog | HOME</title>
+    <title>Blog | Home</title>
 </svelte:head>
 
 
