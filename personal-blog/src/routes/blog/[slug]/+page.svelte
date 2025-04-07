@@ -36,7 +36,6 @@
 {:else}
     <div class="container mx-auto w-[85%] mt-16 text-center">
         <p>Loading article...</p>
-        <a href="/blog" class="text-blue-500 font-semibold hover:underline mt-6 inline-block">Go back to the blog</a>
     </div>
 {/if}
 
