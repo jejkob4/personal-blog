@@ -5,7 +5,7 @@
     import { getBlogDataById, API_URL } from '$lib/index.js';
     import FooterComponent from '$lib/components/footer.svelte'
 
-    let response = null;
+    let response;
 
     onMount(async ()=> {
         if ($page.params.slug){
