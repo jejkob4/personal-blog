@@ -1,18 +1,31 @@
 <script>
-import PocketBase from 'pocketbase';
+import FooterComponent from '$lib/components/footer.svelte'
+import {getBlogData, API_URL} from '$lib/index.js';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+import { onMount } from 'svelte';
+
 let response="";
 
-async function getBlogData() {
-    response = await pb.collection('posts').getFullList({
-        sort: '+created',
-    });
-    console.log(response);
-}
-getBlogData();
+onMount(async () => {
+    response = await getBlogData();
+});
+
 </script>
 
-<div class="container mx-auto w-[85%]">
-    <p>blog ty kokot</p>
+<div class="container mx-auto w-[85%] mt-16">
+    <h1 class="text-2xl text-center">Blog articles</h1>
+    <div class="flex flex-wrap justify-center">
+        {#each response as data}
+            <div class="relative w-full sm:w-[33%] h-[350px] mx-2 my-4 overflow-auto">
+                <img class="h-[200px] w-full object-cover" src="{`${API_URL}/api/files/${data.collectionId}/${data.id}/${data.coverImg}`}" alt="coverImg">
+                <div class="max-h-32 overflow-hidden text-ellipsis p-2">
+                    {@html data.content.slice(0, 250)}
+                </div>
+                <p class="absolute top-2 right-2 bg-blue-500 text-white px-1 py-1 rounded hover:bg-blue-600">{new Date(data.created).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' })}</p>
+                <a class="absolute bottom-0 left-0 w-full bg-blue-500 text-white text-center py-2 cursor-pointer hover:bg-blue-600">SEE THE ARTICLE</a>
+            </div>
+        {/each}
+    </div>
 </div>
+
+<FooterComponent></FooterComponent>
