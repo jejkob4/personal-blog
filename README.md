@@ -6,10 +6,10 @@ A simple SPA build in Svelte with SvelteKit, styled using TailwindCSS.
 
 ## Pocketbase
 
-To access your pocketbase api, you will need to change the variable 
-`API_URL` in **personal-blog/src/lib/index.js**
+To run this project, you will need to add the following environment variables to your .env file
 
-I know I could've used an .env variable, im lazy..
+`VITE_API_KEY`
+
 
 Also checkout the `README.md` file in the folder **/pocketbase**.
 

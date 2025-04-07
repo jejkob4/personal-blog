@@ -1,9 +1,10 @@
 // place files you want to import through the `$lib` alias in this folder.
 import PocketBase from 'pocketbase';
 
-export const API_URL = 'https://pocketbase-production-e150.up.railway.app';
+export const API_URL = import.meta.env.VITE_API_URL;
 
 const pb = new PocketBase(API_URL);
+
 
 export async function getBlogData() {
     try {
