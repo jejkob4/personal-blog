@@ -15,3 +15,12 @@ export async function getBlogData() {
         console.error("Error fetching blog data: ", error);
     }
 }
+
+export async function getBlogDataById(id) {
+    try {
+        const response = await pb.collection('posts').getFirstListItem(`id="${id}"`);
+        return response;
+    } catch (error) {
+        console.error(`Error fetching blog data for slug "${id}":`, error);
+    }
+}

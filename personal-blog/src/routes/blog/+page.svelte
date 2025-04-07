@@ -22,7 +22,7 @@ onMount(async () => {
                     {@html data.content.slice(0, 250)}
                 </div>
                 <p class="absolute top-2 right-2 bg-blue-500 text-white px-1 py-1 rounded hover:bg-blue-600">{new Date(data.created).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' })}</p>
-                <a class="absolute bottom-0 left-0 w-full bg-blue-500 text-white text-center py-2 cursor-pointer hover:bg-blue-600">SEE THE ARTICLE</a>
+                <a href="/blog/{data.id}" class="absolute bottom-0 left-0 w-full bg-blue-500 text-white text-center py-2 cursor-pointer hover:bg-blue-600">SEE THE ARTICLE</a>
             </div>
         {/each}
     </div>

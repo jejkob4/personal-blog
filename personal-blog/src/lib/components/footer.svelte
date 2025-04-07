@@ -1,4 +1,4 @@
-<div class="bg-gray-200 w-[100%] py-12">
+<div class="bg-gray-200 w-[100%] py-12 mt-4">
     <div class="flex justify-center">
         <p>Personal blog &copy; 2025</p>
     </div>
