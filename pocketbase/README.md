@@ -1,12 +1,14 @@
 # Pocketbase integration
 
-Easy pocketbase import..
+checkout how to run pocketbase here: [Pocketbase documentation](https://pocketbase.io/docs/)
 
-just import the file, u can checkout how to run pocketbase here: [Pocketbase documentation](https://pocketbase.io/docs/)
+## Create the table "posts"
 
-## LOGIN AFTER IMPORT!!
-user: user@pocketbase.com
+id: autonum
+content: richText
+createdAt..
+UpdatedAt..
+coverImg: image
+author: email
 
-pass: 12345678
-
-BE SURE TO CHANGE IT WHEN DEPLOYING  THE PROJECT!
+![reference](https://i.imgur.com/qMaYi4X.png)
