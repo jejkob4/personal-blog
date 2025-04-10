@@ -16,18 +16,23 @@ let response = data.response;
     <h1 class="text-2xl text-center">Blog articles</h1>
     <div class="flex flex-wrap justify-center">
         {#if !response}
-            <p class="mt-8">Loading...</p>
-        {/if}
+        <div class="flex justify-center items-center w-full mt-16">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500 border-solid"></div>
+        </div>
+    {:else}
         {#each response as data}
             <div class="relative lg:w-[25%] md:w-[45%] sm:w-full h-[350px] mx-2 my-4 border-2 border-gray-600 rounded">
                 <img class="h-[200px] w-full object-cover" src="{`${API_URL}/api/files/${data.collectionId}/${data.id}/${data.coverImg}`}" alt="coverImg">
                 <div class="max-h-32 overflow-hidden text-ellipsis p-2">
                     {@html data.content}
                 </div>
-                <p class="absolute top-2 right-2 bg-blue-500 text-white px-1 py-1 rounded hover:bg-blue-600">{new Date(data.created).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' })}</p>
+                <p class="absolute top-2 right-2 bg-blue-500 text-white px-1 py-1 rounded hover:bg-blue-600">
+                    {new Date(data.created).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' })}
+                </p>
                 <a href="/blog/{data.id}" class="absolute bottom-0 left-0 w-full bg-blue-500 text-white text-center py-2 cursor-pointer hover:bg-blue-600">SEE THE FULL ARTICLE</a>
             </div>
         {/each}
+    {/if}
     </div>
 </div>
 
