@@ -2,13 +2,9 @@
 import FooterComponent from '$lib/components/footer.svelte'
 import {getBlogData, API_URL} from '$lib/index.js';
 
-import { onMount } from 'svelte';
+export let data; // Comes from load()
 
-let response="";
-
-onMount(async () => {
-    response = await getBlogData();
-});
+let response = data.response;
 
 </script>
 
